@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=3 uid="uid://bp2q18f20tlrp"]
+[gd_scene load_steps=41 format=3 uid="uid://bp2q18f20tlrp"]
 
 [ext_resource type="Texture2D" uid="uid://bfda6g43x7523" path="res://assets/jungle tileset/jungle tileset.png" id="1_5d7xw"]
 [ext_resource type="Script" path="res://character_body_2d.gd" id="2_1d5qv"]
@@ -8,8 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://hcg5n6ecudii" path="res://assets/jungle tileset/player/landing.png" id="4_kob3j"]
 [ext_resource type="Texture2D" uid="uid://bpviortuunir8" path="res://assets/jungle tileset/player/idle (1).png" id="4_lndtb"]
 [ext_resource type="Texture2D" uid="uid://dgm33j5coff1d" path="res://assets/jungle tileset/parallax background/plx-2.png" id="5_mcd1a"]
-[ext_resource type="Texture2D" uid="uid://c68imlx4fjfut" path="res://assets/jungle tileset/player/run.png" id="5_tnpjy"]
 [ext_resource type="Texture2D" uid="uid://cmnogwwy48l4v" path="res://assets/jungle tileset/parallax background/plx-3.png" id="6_ikmwh"]
+[ext_resource type="Texture2D" uid="uid://b2yd4isu8c2l3" path="res://run(1).png" id="7_1rosp"]
 [ext_resource type="Texture2D" uid="uid://tfvhstf3bkao" path="res://assets/jungle tileset/parallax background/plx-4.png" id="7_bsp8u"]
 [ext_resource type="Texture2D" uid="uid://b71l6sn681hn1" path="res://assets/jungle tileset/parallax background/plx-5.png" id="8_afp4t"]
 
@@ -483,37 +483,33 @@ region = Rect2(0, 68, 19, 34)
 atlas = ExtResource("4_lndtb")
 region = Rect2(19, 68, 19, 34)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_pxxwk"]
-atlas = ExtResource("5_tnpjy")
+[sub_resource type="AtlasTexture" id="AtlasTexture_fyc8s"]
+atlas = ExtResource("7_1rosp")
 region = Rect2(0, 0, 21, 33)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_oq57j"]
-atlas = ExtResource("5_tnpjy")
+[sub_resource type="AtlasTexture" id="AtlasTexture_xf02n"]
+atlas = ExtResource("7_1rosp")
 region = Rect2(21, 0, 21, 33)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_5t8xg"]
-atlas = ExtResource("5_tnpjy")
+[sub_resource type="AtlasTexture" id="AtlasTexture_pvvlm"]
+atlas = ExtResource("7_1rosp")
 region = Rect2(42, 0, 21, 33)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_kigny"]
-atlas = ExtResource("5_tnpjy")
-region = Rect2(63, 0, 21, 33)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ylusc"]
-atlas = ExtResource("5_tnpjy")
-region = Rect2(84, 0, 21, 33)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_23qga"]
-atlas = ExtResource("5_tnpjy")
+[sub_resource type="AtlasTexture" id="AtlasTexture_7x2no"]
+atlas = ExtResource("7_1rosp")
 region = Rect2(0, 33, 21, 33)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_kie1d"]
-atlas = ExtResource("5_tnpjy")
+[sub_resource type="AtlasTexture" id="AtlasTexture_n43e7"]
+atlas = ExtResource("7_1rosp")
 region = Rect2(21, 33, 21, 33)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_c0tlc"]
-atlas = ExtResource("5_tnpjy")
+[sub_resource type="AtlasTexture" id="AtlasTexture_pfehe"]
+atlas = ExtResource("7_1rosp")
 region = Rect2(42, 33, 21, 33)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7eajd"]
+atlas = ExtResource("7_1rosp")
+region = Rect2(0, 66, 21, 33)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_04us7"]
 animations = [{
@@ -570,32 +566,29 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_pxxwk")
+"texture": SubResource("AtlasTexture_fyc8s")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_oq57j")
+"texture": SubResource("AtlasTexture_xf02n")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_5t8xg")
+"texture": SubResource("AtlasTexture_pvvlm")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_kigny")
+"texture": SubResource("AtlasTexture_7x2no")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ylusc")
+"texture": SubResource("AtlasTexture_n43e7")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_23qga")
+"texture": SubResource("AtlasTexture_pfehe")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_kie1d")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_c0tlc")
+"texture": SubResource("AtlasTexture_7eajd")
 }],
 "loop": true,
 "name": &"run",
-"speed": 10.0
+"speed": 7.0
 }]
 
 [node name="mundo" type="Node2D"]
@@ -635,7 +628,7 @@ libraries = {
 [node name="anim" type="AnimatedSprite2D" parent="Player"]
 position = Vector2(1356, -99)
 sprite_frames = SubResource("SpriteFrames_04us7")
-animation = &"idle"
+animation = &"jump"
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 

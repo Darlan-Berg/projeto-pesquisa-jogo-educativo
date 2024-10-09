@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://nka8nrib3oyv"
-path="res://.godot/imported/run(1).png-de4a9ba9a57ef4d9412de957141001e6.ctex"
+uid="uid://c8w5th1ruy61c"
+path="res://.godot/imported/6 - Distant_trees.png-d5cf1adb68c9a5ef9802bc47a00ab7bf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/run(1).png"
-dest_files=["res://.godot/imported/run(1).png-de4a9ba9a57ef4d9412de957141001e6.ctex"]
+source_file="res://assets/Seasonal Tilesets/2 - Autumn Forest/Background parts/6 - Distant_trees.png"
+dest_files=["res://.godot/imported/6 - Distant_trees.png-d5cf1adb68c9a5ef9802bc47a00ab7bf.ctex"]
 
 [params]
 

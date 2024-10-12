@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Jogo Educativo"
-run/main_scene="res://mundo.tscn"
+run/main_scene="res://fases/mundo.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -24,6 +24,10 @@ window/size/viewport_height=1080
 
 2d_render/layer_1="terreno"
 2d_render/layer_2="seringueiras"
+2d_physics/layer_1="jogador"
+2d_physics/layer_2="mundo"
+2d_physics/layer_3="inimigos"
+2d_physics/layer_4="coletaveis"
 
 [rendering]
 

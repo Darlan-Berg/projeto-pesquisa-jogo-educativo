@@ -1,17 +1,14 @@
-[gd_scene load_steps=44 format=3 uid="uid://bp2q18f20tlrp"]
+[gd_scene load_steps=18 format=3 uid="uid://bp2q18f20tlrp"]
 
-[ext_resource type="Texture2D" uid="uid://bfda6g43x7523" path="res://assets/jungle tileset/jungle tileset.png" id="1_5d7xw"]
-[ext_resource type="Script" path="res://character_body_2d.gd" id="2_1d5qv"]
-[ext_resource type="Texture2D" uid="uid://jnkmm1udl3xp" path="res://assets/TREE 4_GREEN.png" id="2_anbtc"]
-[ext_resource type="Texture2D" uid="uid://0vskkd151mw4" path="res://assets/Seasonal Tilesets/5 - Misc. universal tiles/Water_frames (16 x 32).png" id="2_jij6a"]
-[ext_resource type="Texture2D" uid="uid://bq7a68awdyke6" path="res://assets/jungle tileset/parallax background/plx-1.png" id="4_5l24r"]
-[ext_resource type="Texture2D" uid="uid://bpviortuunir8" path="res://assets/jungle tileset/player/idle (1).png" id="4_lndtb"]
-[ext_resource type="Texture2D" uid="uid://csy8efnvvsam5" path="res://assets/jungle tileset/player/jump-landing.png" id="5_bohlk"]
-[ext_resource type="Texture2D" uid="uid://dgm33j5coff1d" path="res://assets/jungle tileset/parallax background/plx-2.png" id="5_mcd1a"]
-[ext_resource type="Texture2D" uid="uid://cmnogwwy48l4v" path="res://assets/jungle tileset/parallax background/plx-3.png" id="6_ikmwh"]
-[ext_resource type="Texture2D" uid="uid://b2yd4isu8c2l3" path="res://run(1).png" id="7_1rosp"]
-[ext_resource type="Texture2D" uid="uid://tfvhstf3bkao" path="res://assets/jungle tileset/parallax background/plx-4.png" id="7_bsp8u"]
-[ext_resource type="Texture2D" uid="uid://b71l6sn681hn1" path="res://assets/jungle tileset/parallax background/plx-5.png" id="8_afp4t"]
+[ext_resource type="Texture2D" uid="uid://bfda6g43x7523" path="res://assets/jungle tileset/jungle tileset.png" id="1_wqit0"]
+[ext_resource type="Texture2D" uid="uid://0vskkd151mw4" path="res://assets/Seasonal Tilesets/5 - Misc. universal tiles/Water_frames (16 x 32).png" id="2_rpelb"]
+[ext_resource type="Texture2D" uid="uid://jnkmm1udl3xp" path="res://assets/TREE 4_GREEN.png" id="3_kb28g"]
+[ext_resource type="PackedScene" uid="uid://bhwn1tiepa17a" path="res://atores/player.tscn" id="4_8n3is"]
+[ext_resource type="Texture2D" uid="uid://bq7a68awdyke6" path="res://assets/jungle tileset/parallax background/plx-1.png" id="5_ri6oi"]
+[ext_resource type="Texture2D" uid="uid://dgm33j5coff1d" path="res://assets/jungle tileset/parallax background/plx-2.png" id="6_ne6dp"]
+[ext_resource type="Texture2D" uid="uid://cmnogwwy48l4v" path="res://assets/jungle tileset/parallax background/plx-3.png" id="7_y3bqp"]
+[ext_resource type="Texture2D" uid="uid://tfvhstf3bkao" path="res://assets/jungle tileset/parallax background/plx-4.png" id="8_uoeql"]
+[ext_resource type="Texture2D" uid="uid://b71l6sn681hn1" path="res://assets/jungle tileset/parallax background/plx-5.png" id="9_lvvhh"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_5ku8t"]
 tile_data = PackedInt32Array(0, 262144, 8, 65536, 262144, 9, 131072, 262144, 10, 1, 327680, 8, 65537, 327680, 9, 131073, 327680, 10, 2, 393216, 8, 65538, 393216, 9, 131074, 393216, 10)
@@ -26,7 +23,7 @@ tile_data = PackedInt32Array(0, 458752, 4, 1, 524288, 3)
 tile_data = PackedInt32Array(0, 3, 0, 65536, 3, 1, 131072, 3, 2, 196608, 3, 3, 262144, 3, 4, 1, 65539, 0, 65537, 65539, 1, 131073, 65539, 2, 196609, 65539, 3, 262145, 65539, 4)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kabhd"]
-texture = ExtResource("1_5d7xw")
+texture = ExtResource("1_wqit0")
 19:1/0 = 0
 21:1/0 = 0
 25:1/0 = 0
@@ -410,14 +407,14 @@ texture = ExtResource("1_5d7xw")
 38:20/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_035al"]
-texture = ExtResource("2_jij6a")
+texture = ExtResource("2_rpelb")
 0:0/0 = 0
 1:0/0 = 0
 0:1/0 = 0
 1:1/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mixn7"]
-texture = ExtResource("2_anbtc")
+texture = ExtResource("3_kb28g")
 texture_region_size = Vector2i(20, 16)
 use_texture_padding = false
 0:0/0 = 0
@@ -441,173 +438,7 @@ pattern_1 = SubResource("TileMapPattern_qvk1u")
 pattern_2 = SubResource("TileMapPattern_v5i6w")
 pattern_3 = SubResource("TileMapPattern_uhmeh")
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pc2nd"]
-
-[sub_resource type="Animation" id="Animation_i058c"]
-resource_name = "run"
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_j3a3j"]
-_data = {
-"run": SubResource("Animation_i058c")
-}
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_cfrih"]
-atlas = ExtResource("4_lndtb")
-region = Rect2(0, 0, 19, 34)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_mxjod"]
-atlas = ExtResource("4_lndtb")
-region = Rect2(19, 0, 19, 34)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_5cekl"]
-atlas = ExtResource("4_lndtb")
-region = Rect2(38, 0, 19, 34)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_8b6at"]
-atlas = ExtResource("4_lndtb")
-region = Rect2(57, 0, 19, 34)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_shomo"]
-atlas = ExtResource("4_lndtb")
-region = Rect2(0, 34, 19, 34)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_v2783"]
-atlas = ExtResource("4_lndtb")
-region = Rect2(19, 34, 19, 34)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_flmni"]
-atlas = ExtResource("4_lndtb")
-region = Rect2(38, 34, 19, 34)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_pbruk"]
-atlas = ExtResource("4_lndtb")
-region = Rect2(57, 34, 19, 34)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_t5ef2"]
-atlas = ExtResource("4_lndtb")
-region = Rect2(0, 68, 19, 34)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ledmf"]
-atlas = ExtResource("4_lndtb")
-region = Rect2(19, 68, 19, 34)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_kudk4"]
-atlas = ExtResource("5_bohlk")
-region = Rect2(0, 0, 20, 35)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_lq7ub"]
-atlas = ExtResource("5_bohlk")
-region = Rect2(20, 0, 20, 35)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_fyc8s"]
-atlas = ExtResource("7_1rosp")
-region = Rect2(0, 0, 21, 33)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_xf02n"]
-atlas = ExtResource("7_1rosp")
-region = Rect2(21, 0, 21, 33)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_pvvlm"]
-atlas = ExtResource("7_1rosp")
-region = Rect2(42, 0, 21, 33)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_7x2no"]
-atlas = ExtResource("7_1rosp")
-region = Rect2(0, 33, 21, 33)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_n43e7"]
-atlas = ExtResource("7_1rosp")
-region = Rect2(21, 33, 21, 33)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_pfehe"]
-atlas = ExtResource("7_1rosp")
-region = Rect2(42, 33, 21, 33)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_7eajd"]
-atlas = ExtResource("7_1rosp")
-region = Rect2(0, 66, 21, 33)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_04us7"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_cfrih")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_mxjod")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_5cekl")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_8b6at")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_shomo")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_v2783")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_flmni")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_pbruk")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_t5ef2")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ledmf")
-}],
-"loop": true,
-"name": &"idle",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_kudk4")
-}],
-"loop": true,
-"name": &"jump",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_lq7ub")
-}],
-"loop": true,
-"name": &"landing",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_fyc8s")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_xf02n")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_pvvlm")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_7x2no")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_n43e7")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_pfehe")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_7eajd")
-}],
-"loop": true,
-"name": &"run",
-"speed": 7.0
-}]
-
-[node name="mundo" type="Node2D"]
+[node name="mundo1" type="Node2D"]
 position = Vector2(-4562, 31)
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -620,32 +451,7 @@ layer_0/tile_data = PackedInt32Array(83, 393216, 4, 65619, 393216, 4, 131155, 39
 layer_1/name = "arvores"
 layer_1/tile_data = PackedInt32Array(-786237, 3, 0, -720701, 3, 1, -655165, 3, 2, -589629, 3, 3, -524093, 3, 4, -786236, 65539, 0, -720700, 65539, 1, -655164, 65539, 2, -589628, 65539, 3, -524092, 65539, 4, -720621, 3, 0, -655085, 3, 1, -589549, 3, 2, -524013, 3, 3, -458477, 3, 4, -720620, 65539, 0, -655084, 65539, 1, -589548, 65539, 2, -524012, 65539, 3, -458476, 65539, 4, -130613, 3, 0, -65077, 3, 1, 459, 3, 2, 65995, 3, 3, 131531, 3, 4, -130612, 65539, 0, -65076, 65539, 1, 460, 65539, 2, 65996, 65539, 3, 131532, 65539, 4)
 
-[node name="Player" type="CharacterBody2D" parent="."]
-script = ExtResource("2_1d5qv")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
-position = Vector2(3438, -24.5)
-shape = SubResource("CapsuleShape2D_pc2nd")
-
-[node name="Camera2D" type="Camera2D" parent="Player"]
-position = Vector2(3438, -23.5)
-zoom = Vector2(3, 3)
-limit_top = -129
-limit_bottom = 400
-drag_horizontal_enabled = true
-drag_vertical_offset = -1.0
-editor_draw_limits = true
-editor_draw_drag_margin = true
-
-[node name="animador" type="AnimationPlayer" parent="Player"]
-libraries = {
-"": SubResource("AnimationLibrary_j3a3j")
-}
-
-[node name="anim" type="AnimatedSprite2D" parent="Player"]
-position = Vector2(3438, -23.5)
-sprite_frames = SubResource("SpriteFrames_04us7")
-animation = &"landing"
+[node name="jogador" parent="." instance=ExtResource("4_8n3is")]
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
@@ -657,7 +463,7 @@ motion_mirroring = Vector2(768, 0)
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
 position = Vector2(0, -298)
 scale = Vector2(2, 2)
-texture = ExtResource("4_5l24r")
+texture = ExtResource("5_ri6oi")
 centered = false
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
@@ -668,7 +474,7 @@ motion_mirroring = Vector2(768, 0)
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
 position = Vector2(0, -298)
 scale = Vector2(2, 2)
-texture = ExtResource("5_mcd1a")
+texture = ExtResource("6_ne6dp")
 centered = false
 
 [node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
@@ -679,7 +485,7 @@ motion_mirroring = Vector2(768, 0)
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
 position = Vector2(0, -298)
 scale = Vector2(2, 2)
-texture = ExtResource("6_ikmwh")
+texture = ExtResource("7_y3bqp")
 centered = false
 
 [node name="ParallaxLayer4" type="ParallaxLayer" parent="ParallaxBackground"]
@@ -690,7 +496,7 @@ motion_mirroring = Vector2(768, 0)
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer4"]
 position = Vector2(0, -298)
 scale = Vector2(2, 2)
-texture = ExtResource("7_bsp8u")
+texture = ExtResource("8_uoeql")
 centered = false
 
 [node name="ParallaxLayer5" type="ParallaxLayer" parent="ParallaxBackground"]
@@ -700,5 +506,5 @@ motion_mirroring = Vector2(768, 0)
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer5"]
 position = Vector2(0, -298)
 scale = Vector2(2, 2)
-texture = ExtResource("8_afp4t")
+texture = ExtResource("9_lvvhh")
 centered = false

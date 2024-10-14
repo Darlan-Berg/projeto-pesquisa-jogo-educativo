@@ -40,3 +40,15 @@ func _physics_process(delta: float) -> void:
 			animador.play("idle")
 
 	move_and_slide()
+
+
+func _on_pes_body_entered(body: Node2D) -> void:
+	if body.is_in_group("obstaculo"):
+		body.collision_layer = 1
+		body.collision_mask = 1
+
+
+func _on_pes_body_exited(body: Node2D) -> void:
+	if body.is_in_group("obstaculo"):
+		body.collision_layer = 2
+		body.collision_mask = 2

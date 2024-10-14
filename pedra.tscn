@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://c4jkw8ei3bjue"]
+
+[ext_resource type="Texture2D" uid="uid://bk17ciqyx5di3" path="res://assets/pedra.png" id="1_hx60h"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pqbvk"]
+size = Vector2(48, 48)
+
+[node name="pedra" type="RigidBody2D" groups=["obstaculo"]]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_pqbvk")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_hx60h")

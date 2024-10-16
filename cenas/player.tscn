@@ -5,7 +5,8 @@
 [ext_resource type="Texture2D" uid="uid://csy8efnvvsam5" path="res://assets/jungle tileset/player/jump-landing.png" id="3_4tom6"]
 [ext_resource type="Texture2D" uid="uid://b2yd4isu8c2l3" path="res://run(1).png" id="4_ckjtj"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pc2nd"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_op652"]
+size = Vector2(19, 33)
 
 [sub_resource type="Animation" id="Animation_i058c"]
 resource_name = "run"
@@ -172,15 +173,16 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nafcx"]
-size = Vector2(13.5, 11.5)
+size = Vector2(11, 12.75)
 
 [node name="Player" type="CharacterBody2D"]
-collision_layer = 3
+collision_layer = 2
+collision_mask = 3
 script = ExtResource("1_mc57l")
 
 [node name="colisor" type="CollisionShape2D" parent="."]
-position = Vector2(4251.5, -127)
-shape = SubResource("CapsuleShape2D_pc2nd")
+position = Vector2(4251.5, -125.5)
+shape = SubResource("RectangleShape2D_op652")
 
 [node name="camera" type="Camera2D" parent="."]
 position = Vector2(4251.5, -126)
@@ -205,10 +207,10 @@ animation = &"idle"
 frame_progress = 0.932012
 
 [node name="pes" type="Area2D" parent="."]
-collision_layer = 3
+collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="pes"]
-position = Vector2(4252, -112)
+position = Vector2(4251.5, -111.375)
 shape = SubResource("RectangleShape2D_nafcx")
 
 [connection signal="body_entered" from="pes" to="." method="_on_pes_body_entered"]
